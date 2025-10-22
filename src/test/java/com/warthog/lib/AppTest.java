@@ -19,11 +19,10 @@ public class AppTest {
 
     @Test
     public void TestAccount() {
-        var acc = Account.genKeyPair();
-        var acc2 = Account.fromPk(acc.getPk());
-        System.err.println(acc.getPk());
-        System.err.println(acc2.getPk());
-
-        assertTrue(acc.getPk() == acc2.getPk());
+        var acc = Account.fromPk(
+            "966a71a98bb5d13e9116c0dffa3f1a7877e45c6f563897b96cfd5c59bf0803e0"
+        );
+        var addr = "3661579d61abde5837a8686dc4d65348a2fc61b1fe5f4093";
+        assertTrue(addr.equals(acc.address));
     }
 }

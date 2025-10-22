@@ -17,7 +17,7 @@ public class Account {
 
     private String privateKey;
     public String pubKey;
-    private String address;
+    public String address;
 
     public static Account genKeyPair() {
         var curve = ECNamedCurveTable.getParameterSpec("secp256k1");
